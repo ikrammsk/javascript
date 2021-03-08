@@ -19,4 +19,22 @@ console.log(testLength);
 // - 05 Replace
 var food = "Croissant is meh";
 food=food.replace("meh","so good");
-console.log(food)
+console.log(food);
+
+// - 06 Up and Down
+var basic = "This is cool";
+var basicUp = basic.toUpperCase();
+var basicDown = basic.toLowerCase();
+console.log(basic);
+console.log(basicDown);
+console.log(basicUp);
+
+// - 07 Split
+var word = "banana";
+var letters = word.split("");
+console.log(letters);
+
+// - 08 Template
+var age = "31";
+var template = (`I'm ${age} years old`);
+console.log(template);
