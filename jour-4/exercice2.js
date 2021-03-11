@@ -11,7 +11,7 @@ var cat2 = {
 
 // var cats = [Object.assign(cat,cat2 )]
 var cats = [cat, cat2]
-console.log(cats);
 
+console.log(cats);
 console.log(cat.age);
 console.log(cat2["isCute"]);
