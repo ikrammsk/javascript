@@ -14,4 +14,25 @@
 // console.log(output);
 
 
+// Test process addition
+
+// console.log(typeof process.argv[2])
+
+var firstInput = parseInt(process.argv[2]);
+var secondInput = parseInt(process.argv[3]);
+
+// console.log(secondInput);
+
+console.log(firstInput + secondInput)
+
+// console.log(process.argv[2] + process.argv[3])
+
+// console.log(process.argv[2])
+// console.log(process.argv[3])
+// console.log(process.argv[4])
+
+// console.log(process.argv.slice(2))
+
+
+
 
