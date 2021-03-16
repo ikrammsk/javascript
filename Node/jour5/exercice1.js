@@ -29,6 +29,12 @@ function calculate(num1,num2,operator) {
     }
 }    
 
-calculate(process.argv[2,3,4])
+
+
 var args = process.argv.slice(2);
-console.log(process.argv)
+
+console.log('number:',args);
+
+
+console.log(parseInt(process.argv[2]) + parseInt(process.argv[2]))
+
