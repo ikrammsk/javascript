@@ -17,9 +17,3 @@ function addition(num) {
 
 
 
-multiply(parseInt(process.argv[2]))
-
-
-var exemple = require("./table-utils.js");
-
-console.log(exemple.table());

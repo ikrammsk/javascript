@@ -1,12 +1,8 @@
-/* - Créez une fonction `calculate` qui recevra trois paramètres (deux nombres entiers et un opérateur `+`, `-`, `x`, `/` ou `%`)
-- Créez une condition (méthode au choix) pour chaque valeur possible de l'opérateur qui retournera le résultat du calcul
-- Affichez le résultat dans la console (vérifiez que pour les arguments `5`, `x` et `4` vous obtenez bien `20`)
-- Vous devrez donner les arguments dans le terminal en appelant le programme alors attention aux paramètres !
- */
+
 
 function calculate(num1,num2,operator) {
 
-    if (operator == 'x') {
+    if (operator == '*') {
         
         console.log(num1*num2)
 
@@ -28,13 +24,13 @@ function calculate(num1,num2,operator) {
 
     }
 }    
+var a = parseInt(process.argv[2])
+var b = parseInt(process.argv[3])
+var c = process.argv[4]
 
 
 
-var args = process.argv.slice(2);
 
-console.log('number:',args);
+calculate(a,b,c)
 
-
-console.log(parseInt(process.argv[2]) + parseInt(process.argv[2]))
 
