@@ -4,27 +4,39 @@ var prompt = require("prompt");
 
 prompt.start();
 
-function play() {
-    prompt.get ( { description: "'Quel est le nombre mystère ?'" }, function (mysteryNum, number) {
-        if (mysteryNum = NaN) {
-            console.log("error!");
-        }
-        else if (mysteryNum < number) {
-            play
-            console.log("C'est plus ! ")
-        }
-        else if (mysteryNum > number) {
-            play
-            console.log("C'est moins ! ")
 
+function playPrompt() {
+
+    prompt.get('Quel est le nombre mystère ?',
+
+        function (mysteryNum, num) {
+            if (mysteryNum) {
+                return number(mysteryNum);
+            }
+
+
+            if (mysteryNum = 'NaN') {
+
+                console.log("error! ")
+            }
+
+            else if (mysteryNum < number) {
+                playPrompt
+                console.log("C'est plus ! ")
+            }
+            else if (mysteryNum > number) {
+
+                playPrompt
+                console.log("C'est moins ! ")
+
+            }
+            else if (mysteryNum === number) {
+                playPrompt
+                console.log("Bravo ! ")
+
+            }
         }
-        else if (mysteryNum === number) {
-            play
-            console.log("Bravo ! ")
 
-        }
 
-    });
-}
 
-play()
+playPrompt();
