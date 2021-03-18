@@ -11,12 +11,12 @@ calculateAge("1990-02-14");
 function calculateAge(age) {
 
     var birthDate = new Date(age);
-    var birth = date.getFullYear()
+    var birth = birthDate.getFullYear()
     var todayDate = new Date()
 
 
 
-    console.log()
+    console.log( todayDate.getFullYear() - birthDate.getFullYear(),"ans" );
 
 
 }
