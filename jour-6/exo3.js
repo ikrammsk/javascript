@@ -15,44 +15,40 @@ var properties = [
 
     {
         name: "password",
-        validator: /^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$ /,
-        warning: "- le mot de passe doit contenir au moins 6 caractères, au moins une lettre et au moins un chiffre"
+        validator: /(?=.*\d)(?=.*[a-z])[a-zA-Z0-9]{6,}/,
+        warning: "- le mot de passe doit contenir au moins 6 caractères, au moins une lettre et au moins un chiffre",
+        hidden: true,
+        replace: "*"
     }
+
+    
+
 ]
 // console.log(user)
 
 
 
 prompt.start(); // démarre le prompt
-function onErr(err) { // permet de gérer les erreurs
-    console.log(err);
-    return 1;
-}
 
-prompt.get(properties, function (err, res) {
+
+prompt.get(
+
+    properties, 
+    
+    function checkProfil(err, res){
+
     if (err) {
-        return onErr(err);
+        console.log("Error");
+
     }
-    console.log("Données reçues :");
-    console.log("=> Email : " + res.email);
-    console.log("=> Username: " + res.username);
-    console.log("=> Password : " + res.password);
-  });
+    console.log("All good !")
 
-
-    function checkProfil() {
-     
-
-        if (properties == true) {
-            console.log("All good! ")
-        }
-        else {
-            console.log("Error")
-        }
-    }
+}
+)
 
 
 
 
 
-    checkProfil(properties)
+
+
