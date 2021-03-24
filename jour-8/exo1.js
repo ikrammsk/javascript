@@ -1,28 +1,27 @@
 var request = require('request');
-console.log("#1");
 
 var countriesNames = []
 
-request.get("https://restcountries.eu/rest/v1/all", function (err, res, body) {
+function getCountries(){
 
-    console.log("#2");
+request.get("https://restcountries.eu/rest/v1/all", function (err, res, body) {
+    
+    
     var result = JSON.parse(body);
     
-    var allCountries = result.map(function (name) {
-        return name
+    countriesNames = result.map(function (elem) {
+
+        return elem.name
     });
-
-    console.log(allCountries)
-
+    
+    
+    console.log(countriesNames.join(" - "))
+    
 
 
 
 
 });
+}
 
-
-
-
-
-
-console.log("#3");
+getCountries();
