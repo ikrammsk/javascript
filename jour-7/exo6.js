@@ -26,7 +26,7 @@ var cakes = [
 	},
 ]
 
-// var allCake = cake.filter(function (cake2) {
+// var allCake = cakes.filter(function (cake2) {
 // 	cake2.status = "sold out"
 // 	return (cake2.flavor === "chocolate")
 
@@ -36,24 +36,35 @@ var cakes = [
 // console.log(allCake)
 
 
-var myCakesFavorite = cakes.map(function (cake) {
 
-	cake.flavor === "chocolate"
+var chocolateCakes = cakes.filter(
 
-	return cake;
+    function (element) {
+
+        // console.log("element", element);
+
+        var isCakeChocolate = element.flavor === "chocolate";
+
+        return isCakeChocolate; //true or false
+    }
+
+).map(
+
+    function (element) {
+
+        // console.log("element dans map", element);
+
+        // console.log("element status", element.status)
+
+        element.status = "sold out!";
+
+        // console.log("element après modif de status", element);
+
+        return element;
+    }
+
+)
+
+console.log("Just chocolate and sold out", chocolateCakes)
 
 
-
-});
-
-// console.log(myCakesFavorite)
-
-var myCakesFavoriteList = cakes.filter(function (cake) {
-	cake.status = "sold out"
-	return (cake.flavor === "chocolate")
-
-
-});
-
-
-console.log(myCakesFavoriteList)
